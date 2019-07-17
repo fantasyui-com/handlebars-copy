@@ -3,6 +3,11 @@ const walk = require('walkdir');
 const handlebars = require('handlebars');
 const {copyFile, mkdir, readFile, writeFile} = require('fs').promises;
 
+handlebars.registerHelper('modules', function(person) {
+  if(!person) return "";
+  return person.map(i=>`"${i}":"latest"`).join(", ");
+});
+
 module.exports = main;
 
 async function main(source, destination, data){
