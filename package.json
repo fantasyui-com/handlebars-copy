@@ -1,0 +1,28 @@
+{
+  "name": "handlebars-copy",
+  "version": "1.0.0",
+  "description": "Copy files from one directory to another, rendering handlebars templates found along the way.",
+  "main": "index.js",
+  "bin": {
+    "handlebars-copy": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fantasyui-com/handlebars-copy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fantasyui-com/handlebars-copy/issues"
+  },
+  "homepage": "https://github.com/fantasyui-com/handlebars-copy#readme",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "handlebars": "^4.1.2",
+    "walkdir": "^0.4.0"
+  }
+}
