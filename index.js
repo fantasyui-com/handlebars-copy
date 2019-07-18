@@ -1,11 +1,24 @@
 const path = require('path');
 const walk = require('walkdir');
 const handlebars = require('handlebars');
+const kebabCase = require('lodash/kebabCase');
+const camelCase = require('lodash/camelCase');
+
 const {copyFile, mkdir, readFile, writeFile} = require('fs').promises;
 
-handlebars.registerHelper('modules', function(person) {
-  if(!person) return "";
-  return person.map(i=>`"${i}":"latest"`).join(", ");
+handlebars.registerHelper('kebabCase', function(input) {
+  return kebabCase(input)
+});
+
+handlebars.registerHelper('camelCase', function(input) {
+  return camelCase(input)
+});
+
+Handlebars.registerHelper('bold', function(options) {
+  return new Handlebars.SafeString(
+      '<div class="mybold">'
+      + options.fn(this)
+      + '</div>');
 });
 
 module.exports = main;
