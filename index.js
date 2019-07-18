@@ -14,7 +14,7 @@ handlebars.registerHelper('camelCase', function(input) {
   return camelCase(input)
 });
 
-Handlebars.registerHelper('bold', function(options) {
+handlebars.registerHelper('bold', function(options) {
   return new Handlebars.SafeString(
       '<div class="mybold">'
       + options.fn(this)
