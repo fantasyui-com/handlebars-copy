@@ -1,6 +1,6 @@
 {
   "name": "handlebars-copy",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "description": "Copy files from one directory to another, rendering handlebars templates found along the way.",
   "main": "index.js",
   "bin": {
